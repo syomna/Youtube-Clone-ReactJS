@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Youtube-Clone-ReactJS/static/css/main.f946f251.css",
+    "main.js": "/Youtube-Clone-ReactJS/static/js/main.9bf7aec3.js",
+    "index.html": "/Youtube-Clone-ReactJS/index.html",
+    "main.f946f251.css.map": "/Youtube-Clone-ReactJS/static/css/main.f946f251.css.map",
+    "main.9bf7aec3.js.map": "/Youtube-Clone-ReactJS/static/js/main.9bf7aec3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f946f251.css",
+    "static/js/main.9bf7aec3.js"
+  ]
+}
