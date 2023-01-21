@@ -2,6 +2,7 @@ import { Search } from "@mui/icons-material";
 import { IconButton, Paper } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import mainRoute from "../utils/constants";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,7 +19,7 @@ const SearchBar = () => {
       onSubmit={(e) => {
         e.preventDefault();
         if (searchTerm) {
-          navigate(`/search/${searchTerm}`);
+          navigate(`${mainRoute}search/${searchTerm}`);
           setSearchTerm("");
         }
       }}
