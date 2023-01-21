@@ -13,6 +13,7 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
+export const mainRoute = "/Youtube-Clone-ReactJS/";
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },
@@ -33,8 +34,8 @@ export const categories = [
 
 export const demoThumbnailUrl =
   "https://nono-c.com/wp-content/uploads/2019/03/video-placeholder.jpg";
-export const demoChannelUrl = "/channel/UCmXmlB4-HJytD7wek0Uo97A";
-export const demoVideoUrl = "/video/GDa8kZLNhJ4";
+export const demoChannelUrl = `${mainRoute}/channel/UCmXmlB4-HJytD7wek0Uo97A`;
+export const demoVideoUrl = `${mainRoute}/video/GDa8kZLNhJ4`;
 export const demoChannelTitle = "Youtube clone";
 export const demoVideoTitle = "Youtube clone";
 export const demoProfilePicture =

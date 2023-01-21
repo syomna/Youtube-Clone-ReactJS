@@ -7,6 +7,8 @@ import {
   demoChannelUrl,
   demoThumbnailUrl,
   demoVideoTitle,
+  demoVideoUrl,
+  mainRoute,
 } from "../utils/constants";
 
 const VideoCard = ({
@@ -32,7 +34,7 @@ const VideoCard = ({
         borderRadius: 0,
       }}
     >
-      <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
+      <Link to={videoId ? `${mainRoute}video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={url || demoThumbnailUrl}
           alt={title}
@@ -40,12 +42,14 @@ const VideoCard = ({
         />
       </Link>
       <CardContent sx={{ backgroundColor: "#1E1E1E", height: "80px" }}>
-        <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
+        <Link to={videoId ? `${mainRoute}video/${videoId}` : demoVideoUrl}>
           <Typography variant="subtitle1" fontWeight="bold" color="white">
             {title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
           </Typography>
         </Link>
-        <Link to={channelId ? `/channel/${channelId}` : demoChannelUrl}>
+        <Link
+          to={channelId ? `${mainRoute}channel/${channelId}` : demoChannelUrl}
+        >
           <Typography variant="subtitle2" fontWeight="bold" color="gray">
             {channelTitle.slice(0, 60) || demoChannelTitle.slice(0, 60)}
             <CheckCircle sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />

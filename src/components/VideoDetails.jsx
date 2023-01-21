@@ -3,7 +3,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Link, useParams } from "react-router-dom";
-import { demoChannelUrl } from "../utils/constants";
+import { demoChannelUrl, mainRoute } from "../utils/constants";
 import { fetchFromAPI } from "../utils/fetchFromApi";
 import Comments from "./Comments";
 import Loader from "./Loader";
@@ -62,7 +62,11 @@ const VideoDetails = () => {
             px={2}
             sx={{ color: "white" }}
           >
-            <Link to={channelId ? `/channel/${channelId}` : demoChannelUrl}>
+            <Link
+              to={
+                channelId ? `${mainRoute}channel/${channelId}` : demoChannelUrl
+              }
+            >
               <Typography color="gray">
                 {channelTitle}
                 <CheckCircle

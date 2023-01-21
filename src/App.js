@@ -7,6 +7,7 @@ import {
   SearchFeed,
   ChannelDetails,
 } from "./components";
+import { mainRoute } from "./utils/constants";
 
 export const App = () => {
   console.log(`api key ${process.env.RAPID_API_KEY}`);
@@ -15,17 +16,14 @@ export const App = () => {
       <Box sx={{ backgroundColor: "black" }}>
         <Navbar />
         <Routes>
-          <Route path="/Youtube-Clone-ReactJS/" exact element={<Feed />} />
+          <Route path={`${mainRoute}`} exact element={<Feed />} />
+          <Route path={`${mainRoute}video/:id`} element={<VideoDetails />} />
           <Route
-            path="/Youtube-Clone-ReactJS/video/:id"
-            element={<VideoDetails />}
-          />
-          <Route
-            path="/Youtube-Clone-ReactJS/channel/:id"
+            path={`${mainRoute}channel/:id`}
             element={<ChannelDetails />}
           />
           <Route
-            path="/Youtube-Clone-ReactJS/search/:searchTerm"
+            path={`${mainRoute}search/:searchTerm`}
             element={<SearchFeed />}
           />
         </Routes>
